@@ -21,7 +21,9 @@
 
             <input type="text" placeholder="姓名" id="name" class="validate center" style="width:30%" ><br>
             <input type="text" placeholder="住址" id="addr" class="validate center" style="width:30%" ><br>
-            <label><input type="radio" id="io" value="in">入</label>
+            <input type="text" placeholder="身份证" id="identify" class="validate center" style="width:30%" ><br>
+            <!--<label><input type="radio" name="io" id="io" value="in">入</label><label><input type="radio" name="io" id="io" value="out">出</label></br>-->
+
 
             <a class="btn btn-success center" role="button" id="btn">生成</a>
             <div id="hasil" style="margin:auto; width: 45%"></div>
@@ -35,8 +37,8 @@
         $("#btn").click (function() {
             var name = $('#name').val();
             var addr = $('#addr').val();
-            var io = $('#io').val();
-            var string = name + '_' + addr + '_' + io + '_';
+            var identify = $('#identify').val();
+            var string = name + '_' + addr + '_' + io + '_' + identify;
             $('#hasil').html('<img src="https://qr.johneletto.com/' + string + '" class="materialboxed" width="650"   />')
     });
 })
