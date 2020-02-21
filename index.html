@@ -20,6 +20,7 @@
         <p class="lead center">
 
             <input type="text" placeholder="姓名" id="name" class="validate center" style="width:30%" ><br>
+            <input type="text" placeholder="住址" id="addr" class="validate center" style="width:30%" ><br>
 
             <a class="btn btn-success center" role="button" id="btn">生成</a>
             <div id="hasil" style="margin:auto; width: 45%"></div>
@@ -32,7 +33,9 @@
     $().ready (function(){
         $("#btn").click (function() {
             var name = $('#name').val();
-            $('#hasil').html('<img src="https://qr.johneletto.com/' + name + '" class="materialboxed" width="650"   />')
+            var addr = $('#addr').val()
+            var string = name + "_" + addr + "_";
+            $('#hasil').html('<img src="https://qr.johneletto.com/' + string + '" class="materialboxed" width="650"   />')
     });
 })
 </script>
