@@ -41,7 +41,8 @@
             var duty = $('#duty').val();
             var temp = $('#temp').val();
             var string = name + '_' + addr + '_' + duty + '_' + temp;
-            $('#hasil').html('<img src="http://2v.dedecms.com/index.php/welcome/generate_qrcode?message=' + string + '" class="materialboxed" width="650"   />')
+            window.location.href='http://2v.dedecms.com/index.php/welcome/generate_qrcode?message=' + string;
+            //$('#hasil').html('<img src="http://2v.dedecms.com/index.php/welcome/generate_qrcode?message=' + string + '" class="materialboxed" width="650"   />')
     });
 })
 </script>
