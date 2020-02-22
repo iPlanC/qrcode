@@ -20,7 +20,8 @@
         <p class="lead center">
 
             <input type="text" placeholder="姓名" id="name" class="validate center" style="width:30%" ><br>
-            <input type="text" placeholder="住址(例：XX小区-X号楼-X单元-101)" id="addr" class="validate center" style="width:30%" ><br>
+            <input type="text" placeholder="电话" id="call" class="validate center" style="width:30%" ><br>
+            <input type="text" placeholder="住址(例：X号楼-X单元-101)" id="addr" class="validate center" style="width:30%" ><br>
             <!--<input type="text" placeholder="单元" id="unit" class="validate center" style="width:30%" ><br>-->
             <input type="text" placeholder="事由" id="duty" class="validate center" style="width:30%" ><br>
             <input type="text" placeholder="体温" id="temp" class="validate center" style="width:30%" ><br>
@@ -38,10 +39,11 @@
     $().ready (function(){
         $("#btn").click (function() {
             var name = $('#name').val();
+            var call = $('#call').val();
             var addr = $('#addr').val();
             var duty = $('#duty').val();
             var temp = $('#temp').val();
-            var string = name + '_' + addr + '_' + duty + '_' + temp;
+            var string = name + '_' + call + '_' + addr + '_' + duty + '_' + temp;
             window.location.href='http://2v.dedecms.com/index.php/welcome/generate_qrcode?message=' + string;
             //$('#hasil').html('<img src="http://2v.dedecms.com/index.php/welcome/generate_qrcode?message=' + string + '" class="materialboxed" width="650"   />')
     });
