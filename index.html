@@ -21,7 +21,8 @@
 
             <input type="text" placeholder="姓名" id="name" class="validate center" style="width:30%" ><br>
             <input type="text" placeholder="住址" id="addr" class="validate center" style="width:30%" ><br>
-            <input type="text" placeholder="身份证" id="identify" class="validate center" style="width:30%" ><br>
+            <input type="text" placeholder="事由" id="duty" class="validate center" style="width:30%" ><br>
+            <input type="text" placeholder="体温" id="temp" class="validate center" style="width:30%" ><br>
             <!--<label><input type="radio" name="io" id="io" value="in">入</label><label><input type="radio" name="io" id="io" value="out">出</label></br>-->
 
 
@@ -37,8 +38,9 @@
         $("#btn").click (function() {
             var name = $('#name').val();
             var addr = $('#addr').val();
-            var identify = $('#identify').val();
-            var string = name + '_' + addr + '_' + identify;
+            var duty = $('#duty').val();
+            var temp = $('#temp').val();
+            var string = name + '_' + addr + '_' + duty + '_' + temp;
             $('#hasil').html('<img src="http://2v.dedecms.com/index.php/welcome/generate_qrcode?message=' + string + '" class="materialboxed" width="650"   />')
     });
 })
